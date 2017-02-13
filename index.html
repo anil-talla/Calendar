@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Date Picker</title>
+    <link rel="stylesheet" href="bootstrap-3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <button class="btn btn-warning backBtn" style="display:none" onclick="showCalendar()">Back</button>
+    <div class="selectedDate alert alert-success" style="display:none"></div>    
+    <!--<input id="date-input" />-->
+    <div class="js-date-picker">
+        <div class="container">
+            <div class="btn-group btn-group-justified">
+                <div class="btn btn-default" onclick="previousMonth()"><i class="fa fa-angle-left"></i></div>
+                <div class="btn-group">
+                    <button class="btn btn-default displayMonth" onclick="displayMonthCal()"></button>
+                </div>
+                <div class="btn-group ">
+                    <button class="btn btn-default displayYear" onclick="displayYearCal()"></button>
+                </div>
+                <div class="btn btn-default" onclick="nextMonth()"><i class="fa fa-angle-right"></i></div>
+            </div>
+        </div>
+        <div class="container">
+            <table class="table table-stripe js-dates">
+                <thead>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wen</th>
+                        <th>Thr</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <style>
+        .js-date-picker {
+            max-width: 330px;
+            margin: 10px;
+            border: 1px solid #dddddd;
+        }
+
+            .js-date-picker .container {
+                max-width: 100%;
+            }
+
+            .js-date-picker .container {
+                padding: 0;
+            }
+
+            .js-date-picker .table {
+                margin: 0;
+                text-align: center;
+            }
+
+            .js-date-picker .date--cell {
+                cursor: pointer;
+            }
+
+                .js-date-picker .date--cell:hover {
+                    background: #f2f2f2;
+                }
+
+        .today {
+            background: #ffd800;
+        }
+
+        .js-date-picker .monthCalendar thead, .js-date-picker .yearCalendar thead {
+            display: none;
+        }
+    </style>
+    <script src="calendar.js"></script>
+</body>
+</html>
